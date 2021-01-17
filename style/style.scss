@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#todo-project {
+  height: 100vh;
+  background-color: lightgray;
+  font-family: "Poppins", sans-serif;
+  overflow: scroll;
+}
+header {
+  font-size: 4rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.3rem;
+  padding-top: 5vh;
+}
+.todo-form {
+  display: flex;
+  margin-top: 8vh;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 3rem;
+}
+.todo-input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+  border: solid darkgray 0.3rem;
+}
+form button {
+  color: lightgray;
+  background: white;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+form button:hover {
+  background: gray;
+  color: white;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list {
+  min-width: 50%;
+  list-style: none;
+}
+.todo {
+  margin: 0.1rem;
+  background: white;
+  color: black;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid darkgray 0.2rem;
+  transition: all 0.5s ease-in-out;
+}
+.todo li {
+  flex: 1;
+}
+.complete-btn {
+  background: white;
+  color: green;
+  border: none;
+  padding: 0.6rem;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+.complete-btn:hover {
+  background: green;
+  color: white;
+}
+.delete-btn {
+  background: white;
+  color: rgb(231, 90, 90);
+  border: none;
+  padding: 0.6rem;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+.delete-btn:hover {
+  background: rgb(231, 90, 90);
+  color: white;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.fall {
+  transform: translateY(8rem) rotateZ(30deg);
+  opacity: 0;
+}
+.fa-trash-alt,
+.fa-check-square {
+  pointer-events: none;
+}
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  -moz-appearance: none;
+  border: none;
+  cursor: pointer;
+  width: 10rem;
+  font-size: 1.5rem;
+  color: gray;
+  padding: 0.5rem;
+}
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  border: solid darkgray 0.3rem;
+}
+.butinput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+  padding: 0.6rem;
+  color: gray;
+  background-color: lightgray;
+  transition: all 0.2s ease-in-out;
+}
+
+.select:hover::after {
+  background-color: darkgray;
+  color: white;
+}
+@media (max-width: 800px) {
+  .todo-input {
+    max-width: 50%;
+    justify-items: center;
+  }
+  .todo-form {
+    flex-flow: column;
+  }
+}

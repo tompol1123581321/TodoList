@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#todo-project {
+  height: 100vh;
+  background-color: lightgray;
+  font-family: "Poppins", sans-serif;
+  overflow: scroll;
+}
+
+header {
+  font-size: 4rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.3rem;
+  padding-top: 5vh;
+}
+
+.todo-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 8vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 3rem;
+}
+
+.todo-input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+  border: solid darkgray 0.3rem;
+}
+
+form button {
+  color: lightgray;
+  background: white;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+form button:hover {
+  background: gray;
+  color: white;
+}
+
+.todo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo-list {
+  min-width: 50%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.1rem;
+  background: white;
+  color: black;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: solid darkgray 0.2rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.todo li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.complete-btn {
+  background: white;
+  color: green;
+  border: none;
+  padding: 0.6rem;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.complete-btn:hover {
+  background: green;
+  color: white;
+}
+
+.delete-btn {
+  background: white;
+  color: #e75a5a;
+  border: none;
+  padding: 0.6rem;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.delete-btn:hover {
+  background: #e75a5a;
+  color: white;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  -webkit-transform: translateY(8rem) rotateZ(30deg);
+          transform: translateY(8rem) rotateZ(30deg);
+  opacity: 0;
+}
+
+.fa-trash-alt,
+.fa-check-square {
+  pointer-events: none;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  -moz-appearance: none;
+  border: none;
+  cursor: pointer;
+  width: 10rem;
+  font-size: 1.5rem;
+  color: gray;
+  padding: 0.5rem;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  border: solid darkgray 0.3rem;
+}
+
+.butinput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+  padding: 0.6rem;
+  color: gray;
+  background-color: lightgray;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.select:hover::after {
+  background-color: darkgray;
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .todo-input {
+    max-width: 50%;
+    justify-items: center;
+  }
+  .todo-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+}
+/*# sourceMappingURL=style.css.map */
